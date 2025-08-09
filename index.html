@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-color-scheme="dark">
+<html lang="en" data-color-scheme="dark" data-theme="teal">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atanu Ghosh - Software Engineer | Portfolio</title>
+    <title>Atanu Ghosh | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' ry='12' fill='%230a0a0a'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='28' font-weight='700' fill='%23ffffff'%3EAG%3C/text%3E%3C/svg%3E">
     <meta name="description"
         content="Portfolio of Atanu Ghosh - Associate Software Engineer II at UnitedHealth Group. Full-Stack Developer and AI-ML Enthusiast.">
 
@@ -53,6 +54,17 @@
                     <span class="theme-icon">🌙</span>
                 </button>
 
+                <div class="theme-picker">
+                    <select id="themeSelect" aria-label="Select theme">
+                        <option value="teal">Teal</option>
+                        <option value="purple">Purple</option>
+                        <option value="blue">Blue</option>
+                        <option value="emerald">Emerald</option>
+                        <option value="rose">Rose</option>
+                        <option value="amber">Amber</option>
+                    </select>
+                </div>
+
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/atanughosh01" target="_blank" aria-label="LinkedIn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -86,15 +98,16 @@
                 <div class="hero__content">
                     <div class="hero__text">
                         <h1 class="hero__title">
-                            <div style="opacity:.5;color:var(--muted);font-weight:600">Hi, I'm</div>
-                            <span class="hero__name">Atanu Ghosh</span>
+                            <div class="hero__intro">Hi, I'm</div>
+                            <span class="hero__name"><span class="hero__name-first">Atanu</span> <span class="hero__name-last">Ghosh</span></span>
                             <span class="hero__subtitle">Associate Software Engineer II</span>
                         </h1>
                         <p class="hero__tagline">Software Engineer | Full-Stack Developer | AI-ML Enthusiast
                         </p>
                         <div class="hero__actions">
+                            <a href="https://www.linkedin.com/in/atanughosh01" target="_blank" class="btn btn--primary">Resume</a>
                             <a href="#projects" class="btn btn--primary">View My Work</a>
-                            <a href="#contact" class="btn btn--outline">Contact Me</a>
+                            <a href="#contact" class="btn btn--outline-primary">Contact Me</a>
                         </div>
                     </div>
                     <div class="hero__image">
@@ -212,6 +225,13 @@
                                     </svg>
                                     GitHub
                                 </a>
+                                <a href="https://atanughosh01.github.io/elasticsearch-api" target="_blank" class="project-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                    Docs
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +262,7 @@
                                         stroke-width="2">
                                         <path d="m9 18 6-6-6-6" />
                                     </svg>
-                                    Live Demo
+                                    Live
                                 </a>
                             </div>
                         </div>
@@ -433,6 +453,12 @@
                             </div>
                         </div>
                         <div class="contact__social">
+                            <a href="mailto:atghosh.cs@gmail.com" class="social-link" aria-label="Gmail">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.15L12 12l10-5.85V6H2z"></path>
+                                    <path d="M4 8.5V18h4v-6l4 2.6 4-2.6V18h4V8.5L12 14 4 8.5z"></path>
+                                </svg>
+                            </a>
                             <a href="https://www.linkedin.com/in/atanughosh01" target="_blank" class="social-link"
                                 aria-label="LinkedIn">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -447,35 +473,42 @@
                                         d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                             </a>
+                            <a href="https://twitter.com/ghoshatanu01" target="_blank" class="social-link" aria-label="X (Twitter)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19.633 2H23L14.92 11.1 24 22h-7.3l-5.57-6.72L4.9 22H1l8.95-10.36L0 2h7.32l5.2 6.28L19.633 2z"></path>
+                                </svg>
+                            </a>
+                            
                         </div>
                     </div>
                     <form class="contact__form" id="contactForm">
                         <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
                             <span class="form-error" id="nameError"></span>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                             <span class="form-error" id="emailError"></span>
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
                             <span class="form-error" id="subjectError"></span>
                         </div>
                         <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="This function is not working yet, kindly email me at atghosh.cs@gmail.com" required></textarea>
                             <span class="form-error" id="messageError"></span>
                         </div>
                         <button type="submit" class="btn btn--primary btn--full-width" id="submitBtn">
-                            <span class="btn-text">Send Message</span>
+                            <span class="btn-text">Send Message</span> 
                             <span class="btn-loading" style="display: none;">Sending...</span>
                         </button>
                         <div class="form-success" id="formSuccess" style="display: none;">
-                            Thank you! Your message has been sent successfully.
+                            <!-- Thank you! Your message has been sent successfully. -->
+                            This function is not working yet, kindly email me at atghosh.cs@gmail.com
                         </div>
                     </form>
                 </div>
@@ -488,16 +521,29 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__text">
-                    <p>&copy; 2024 Atanu Ghosh. All rights reserved.</p>
+                    <p>&copy; 2025 Atanu Ghosh | All rights reserved.</p>
                 </div>
                 <div class="footer__social">
+                    <a href="mailto:atghosh.cs@gmail.com" aria-label="Email">Email</a>
                     <a href="https://www.linkedin.com/in/atanughosh01" target="_blank"
                         aria-label="LinkedIn">LinkedIn</a>
                     <a href="https://github.com/atanughosh01" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://twitter.com/ghoshatanu01" target="_blank" aria-label="X">Twitter</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Ambient rockets (ultra-light CSS only) -->
+    <div class="ambient-rocket path-left">🚀</div>
+    <div class="ambient-rocket path-right">🚀</div>
+    <div class="ambient-rocket path-top">🚀</div>
+    <div class="ambient-rocket path-bottom">🚀</div>
+
+    <!-- Ambient birds (CSS-only, ultra-light) -->
+    <div class="ambient-bird path-left">🕊️</div>
+    <div class="ambient-bird path-right">🕊️</div>
+    <div class="ambient-bird path-diag">🕊️</div>
 
     <div class="cursor-dot" aria-hidden="true"></div>
 

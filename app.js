@@ -4,24 +4,33 @@ const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav__link');
 const themeToggle = document.getElementById('themeToggle');
+const themeSelect = document.getElementById('themeSelect');
 const scrollProgress = document.getElementById('scrollProgress');
 const particles = document.getElementById('particles');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const contactForm = document.getElementById('contactForm');
 const statNumbers = document.querySelectorAll('.stat-number');
+const ambientRockets = () => Array.from(document.querySelectorAll('.ambient-rocket'));
+const ambientBirds = () => Array.from(document.querySelectorAll('.ambient-bird'));
 
 // Theme Management
 class ThemeManager {
     constructor() {
         this.currentTheme = localStorage.getItem('theme') || 'dark';
+        this.currentPalette = localStorage.getItem('palette') || 'teal';
         this.init();
     }
 
     init() {
         this.applyTheme(this.currentTheme);
+        this.applyPalette(this.currentPalette);
         if (themeToggle) {
             themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
+        if (themeSelect) {
+            themeSelect.value = this.currentPalette;
+            themeSelect.addEventListener('change', (e) => this.setPalette(e.target.value));
         }
     }
 
@@ -35,6 +44,16 @@ class ThemeManager {
         document.documentElement.setAttribute('data-color-scheme', theme);
         const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
         if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+
+    applyPalette(palette) {
+        document.documentElement.setAttribute('data-theme', palette);
+    }
+
+    setPalette(palette) {
+        this.currentPalette = palette;
+        this.applyPalette(palette);
+        localStorage.setItem('palette', palette);
     }
 }
 
@@ -347,29 +366,10 @@ class FormManager {
     init() {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
 
-        // Add floating label functionality
         const formControls = this.form.querySelectorAll('.form-control');
         formControls.forEach(control => {
-            control.addEventListener('focus', () => this.handleInputFocus(control));
-            control.addEventListener('blur', () => this.handleInputBlur(control));
             control.addEventListener('input', () => this.clearError(control));
         });
-    }
-
-    handleInputFocus(input) {
-        const label = input.nextElementSibling;
-        if (label && label.classList.contains('form-label')) {
-            label.style.transform = 'translateY(-20px) scale(0.8)';
-            label.style.color = 'var(--color-primary)';
-        }
-    }
-
-    handleInputBlur(input) {
-        const label = input.nextElementSibling;
-        if (label && label.classList.contains('form-label') && !input.value) {
-            label.style.transform = 'translateY(0) scale(1)';
-            label.style.color = 'var(--color-text-secondary)';
-        }
     }
 
     handleSubmit(e) {
@@ -383,11 +383,7 @@ class FormManager {
                 this.showSuccess();
                 this.form.reset();
 
-                // Reset floating labels
-                const formControls = this.form.querySelectorAll('.form-control');
-                formControls.forEach(control => {
-                    this.handleInputBlur(control);
-                });
+                // Nothing extra needed; placeholders return automatically
             }, 2000);
         }
     }
@@ -405,6 +401,9 @@ class FormManager {
                 isValid = false;
             } else if (fieldName === 'email' && !this.isValidEmail(field.value)) {
                 this.showError(field, error, 'Please enter a valid email address');
+                isValid = false;
+            } else if (fieldName === 'message' && field.value.trim().length < 50) {
+                this.showError(field, error, 'Message must be at least 50 characters');
                 isValid = false;
             }
         });
@@ -585,6 +584,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log('Portfolio initialized successfully! 🚀');
+
+    // Avoid cursor collisions for rockets and birds by toggling reverse animation
+    const cursorDot = document.querySelector('.cursor-dot');
+    const avoidRadius = 80; // px, increase for earlier deflection
+
+    const toggleAvoid = (els, mouseX, mouseY) => {
+        els.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            const dx = x - mouseX;
+            const dy = y - mouseY;
+            const dist = Math.hypot(dx, dy);
+            const shouldAvoid = dist < avoidRadius;
+            if (shouldAvoid) {
+                // force restart the avoid animation by toggling the class
+                el.classList.remove('avoid');
+                // trigger reflow to restart animation reliably
+                void el.offsetWidth;
+                el.classList.add('avoid');
+            } else {
+                el.classList.remove('avoid');
+            }
+        });
+    };
+
+    document.addEventListener('mousemove', (e) => {
+        toggleAvoid(ambientRockets(), e.clientX, e.clientY);
+        toggleAvoid(ambientBirds(), e.clientX, e.clientY);
+    });
 });
 
 // Export for potential external use
