@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atanu Ghosh - Software Engineer | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Atanu Ghosh - Associate Software Engineer II at UnitedHealth Group. Full-Stack Developer and AI-ML Enthusiast.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Fixed Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <a href="#home" class="nav__logo">AG</a>
+            </div>
+
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#projects" class="nav__link">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#experience" class="nav__link">Experience</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#achievements" class="nav__link">Achievements</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/atanughosh01" target="_blank" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/atanughosh01" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__particles" id="particles"></div>
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">
+                            <div style="opacity:.5;color:var(--muted);font-weight:600">Hi, I'm</div>
+                            <span class="hero__name">Atanu Ghosh</span>
+                            <span class="hero__subtitle">Associate Software Engineer II</span>
+                        </h1>
+                        <p class="hero__tagline">Software Engineer | Full-Stack Developer | AI-ML Enthusiast
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#projects" class="btn btn--primary">View My Work</a>
+                            <a href="#contact" class="btn btn--outline">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <div class="hero__image-placeholder">
+                            <img src="./assets/zPicture2.jpg" alt="Atanu Ghosh Portrait" class="hero__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+                    <span class="scroll-arrow"></span>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about__description">
+                            Self-driven and detail-oriented Software Engineer with a solid foundation in Data
+                            Structures, Algorithms, and Web development, having 2+ years of working experience in a
+                            fortune-5 product based MNC. My strengths lie in problem-solving, cross-functional
+                            collaboration, and delivering production-ready code with performance, maintainability, and
+                            security in mind.
+                        </p>
+                        <div class="about__skills">
+                            <div class="skill-category">
+                                <h4>Languages</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Bash</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Frameworks</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Flask</span>
+                                    <span class="skill-tag">Django</span>
+                                    <span class="skill-tag">ReactJS</span>
+                                    <span class="skill-tag">NodeJS</span>
+                                    <span class="skill-tag">ExpressJS</span>
+                                    <span class="skill-tag">Spring Boot</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">Kafka</span>
+                                    <span class="skill-tag">ElasticSearch</span>
+                                    <span class="skill-tag">Jenkins</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__stats">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="20">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="1000">0</div>
+                            <div class="stat-label">Problems Solved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects__filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web-development">Web Development</button>
+                    <button class="filter-btn" data-filter="apis">APIs</button>
+                    <button class="filter-btn" data-filter="networking">Networking</button>
+                </div>
+                <div class="projects__grid">
+                    <div class="project-card" data-category="apis">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">ElasticSearch-API</h3>
+                            <p class="project-card__description">
+                                A collection of REST APIs for Elastic-Cluster with 10+ CRUD features including
+                                indexing, search functionalities, and security implementation
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ElasticSearch</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/atanughosh01/elasticsearch-api" target="_blank"
+                                    class="project-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="project-card featured" data-category="web-development"> -->
+                    <div class="project-card" data-category="web-development">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Byte-Chat</h3>
+                            <p class="project-card__description">
+                                Real-time multi-user chat application with authentication, messaging,
+                                notifications, and rich media support
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">NodeJS</span>
+                                <span class="tech-tag">ReactJS</span>
+                                <span class="tech-tag">ExpressJS</span>
+                                <span class="tech-tag">Twilio</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/atanughosh01/ByteChat" target="_blank" class="project-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://byte-chat.netlify.app" target="_blank" class="project-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="m9 18 6-6-6-6" />
+                                    </svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="networking">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Network-Simulations</h3>
+                            <p class="project-card__description">
+                                Simulations of networking concepts including Error-Detection, Flow-Control,
+                                CSMA and CDMA techniques with 50% latency reduction
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Multithreading</span>
+                                <span class="tech-tag">Multiprocessing</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com/atanughosh01/Network-Simulations" target="_blank"
+                                    class="project-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience__timeline">
+                    <div class="experience-card">
+                        <div class="experience-card__header">
+                            <div class="company-logo">UHG</div>
+                            <div class="experience-card__info">
+                                <h3 class="experience-card__title">Associate Software Engineer II</h3>
+                                <p class="experience-card__company">UnitedHealth Group (Optum)</p>
+                                <p class="experience-card__duration">Sep 2024 - Present • Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <div class="experience-card__content">
+                            <ul class="experience-card__responsibilities">
+                                <li>Partnered with ElasticSearch team to develop RESTful APIs using Python-Flask</li>
+                                <li>Built interactive dashboards for ECE data insights</li>
+                                <li>Automated build, deployment and delivery processes</li>
+                            </ul>
+                            <div class="experience-card__tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">ElasticSearch</span>
+                                <span class="tech-tag">Kibana</span>
+                                <span class="tech-tag">Logstash</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-card__header">
+                            <div class="company-logo">UHG</div>
+                            <div class="experience-card__info">
+                                <h3 class="experience-card__title">Software Engineer</h3>
+                                <p class="experience-card__company">UnitedHealth Group (Optum)</p>
+                                <p class="experience-card__duration">Sep 2023 - Sep 2024 • Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <div class="experience-card__content">
+                            <ul class="experience-card__responsibilities">
+                                <li>Led IdentityIQ instance upgrade reducing system downtime by 50%</li>
+                                <li>Developed 60+ Java automation test scripts</li>
+                                <li>Optimized software release cycle time by 33%</li>
+                            </ul>
+                            <div class="experience-card__tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">TestNG</span>
+                                <span class="tech-tag">Jenkins</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-card__header">
+                            <div class="company-logo">UHG</div>
+                            <div class="experience-card__info">
+                                <h3 class="experience-card__title">Software Engineering Intern</h3>
+                                <p class="experience-card__company">UnitedHealth Group (Optum)</p>
+                                <p class="experience-card__duration">Jun 2022 - Aug 2022 • Bengaluru, India</p>
+                            </div>
+                        </div>
+                        <div class="experience-card__content">
+                            <ul class="experience-card__responsibilities">
+                                <li>Built Java Spring Boot application for Kafka management</li>
+                                <li>Shortened developer workloads by 75% for 600+ teams</li>
+                                <li>Automated deployment using Docker, Kubernetes, Jenkins</li>
+                            </ul>
+                            <div class="experience-card__tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Kafka</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements" id="achievements">
+            <div class="container">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <div class="achievements__grid">
+                    <div class="achievement-card">
+                        <div class="achievement-card__icon">🏆</div>
+                        <div class="achievement-card__content">
+                            <h3 class="achievement-card__title">WBJEE 2019</h3>
+                            <p class="achievement-card__description">
+                                Secured rank 216 out of 1,50,000+ candidates
+                            </p>
+                            <div class="achievement-card__badge">Top 0.15%</div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-card__icon">🥇</div>
+                        <div class="achievement-card__content">
+                            <h3 class="achievement-card__title">NEST 2019</h3>
+                            <p class="achievement-card__description">
+                                All India Rank 289 out of 37,000+ candidates
+                            </p>
+                            <div class="achievement-card__badge">Top 0.8%</div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-card__icon">💻</div>
+                        <div class="achievement-card__content">
+                            <h3 class="achievement-card__title">Coding Excellence</h3>
+                            <p class="achievement-card__description">
+                                1000+ algorithmic problems solved across platforms
+                            </p>
+                            <div class="achievement-badges">
+                                <span class="achievement-badge">Knight on LeetCode</span>
+                                <span class="achievement-badge">4 Star on CodeChef</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-card__icon">🌟</div>
+                        <div class="achievement-card__content">
+                            <h3 class="achievement-card__title">Google Competitions</h3>
+                            <p class="achievement-card__description">
+                                Participated in Google CodeJam 2022 and Google Hashcode 2022
+                            </p>
+                            <div class="achievement-card__year">2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <h3>Let's work together</h3>
+                        <p>
+                            I'm always open to discussing new opportunities, interesting projects,
+                            and creative ideas. Feel free to reach out if you'd like to connect!
+                        </p>
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon">📧</span>
+                                <span>atghosh.cs@gmail.com</span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📍</span>
+                                <span>Hyderabad, Telangana, India</span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📱</span>
+                                <span>+91-8927208591</span>
+                            </div>
+                        </div>
+                        <div class="contact__social">
+                            <a href="https://www.linkedin.com/in/atanughosh01" target="_blank" class="social-link"
+                                aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/atanughosh01" target="_blank" class="social-link"
+                                aria-label="GitHub">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__text">
+                    <p>&copy; 2024 Atanu Ghosh. All rights reserved.</p>
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/atanughosh01" target="_blank"
+                        aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://github.com/atanughosh01" target="_blank" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
